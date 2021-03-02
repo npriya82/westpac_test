@@ -1,11 +1,8 @@
 # Westpac automation poc
 
-![.NET Core](https://github.com/SamuelGarrattIqa/coypu_specflow/workflows/.NET%20Core/badge.svg)
-
 This designed as an base for creating a UI test using SpecFlow and Coypu.
 
 This project uses C# to drive UI and automation tests 
-[SpecFlow](https://specflow.org/) is used to describe the tests using Gherkin syntax.
 
 # Initial Setup IDE
 
@@ -25,18 +22,8 @@ Or from the command line `dotnet build` in the folder when the `.sln` is.
 * [SpecFlow](https://specflow.org/)
 * [MsTest](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
 
-# Running tests via command line
-
-`dotnet test -s test.runsettings`
-
-where the runsettings file matches the location of a file which would vary according to environment. 
-For example, for a dev environment the file would be `dev.runsettings`.
-
-To run tests through a remote server (Zalenium), use the `testRemote.runsettings` file. 
-
 # Running via Visual Studio
 
-* Select the runsettings file desired by selecting `Test->Select Settings file` from the menu bar (This may be within a global settings sub menu.)
 * View all tests `Test->Test Explorer`
 * Run tests by right clicking on an individual scenario or feature and selecting `Run`
 
