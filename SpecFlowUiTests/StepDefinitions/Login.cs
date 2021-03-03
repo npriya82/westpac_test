@@ -24,7 +24,6 @@ namespace SpecFlowUiTests.StepDefinitions
         {
             Thread.Sleep(500);
             new HomePage(scenarioCommon).Visit();
-            Console.WriteLine("I am done - 1 ");
         }
 
         [When(@"I enter valid login and password credentials")]
@@ -39,11 +38,8 @@ namespace SpecFlowUiTests.StepDefinitions
         [Then(@"my login is successful")]
         public void ThenMyLoginIsSuccessful()
         {
-            Console.WriteLine("here-a");
             new LoginPage(scenarioCommon).UserProfile.Should().NotBeNull();
-            Console.WriteLine("here-b");
             new LoginPage(scenarioCommon).UserLogout.Should().NotBeNull();
-            Console.WriteLine("here-c");
             Thread.Sleep(2000);
         }
 
@@ -55,18 +51,9 @@ namespace SpecFlowUiTests.StepDefinitions
             new LoginPage(scenarioCommon).Visit();
             // assert for page headings (basic info. additonal info)
             new LoginPage(scenarioCommon).BasicHeading.Should().NotBeNull();
-            Console.WriteLine("here-1");
             new LoginPage(scenarioCommon).AddInfoHeading.Should().NotBeNull();
-            Console.WriteLine("here-2");
             // click on logout 
             new LoginPage(scenarioCommon).ClickLogout();
-            Console.WriteLine("here-3");
-            // check no profile button is present 
-           // new LoginPage(scenarioCommon).UserProfile.Should().BeNull();
-            Console.WriteLine("here-4");
         }
-
-
-
     }
 }

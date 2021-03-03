@@ -43,17 +43,14 @@ namespace Hooks
                       + seperator + DateTime.Now.ToString("MMddyyyy"));
                  var path = $"{currentDateDirectory}{seperator}{testContext.TestName}" + 
                     DateTime.Now.ToString("_HHmmss") + ".png";
-              //  var path = $"{GetInformation.projectDirectory}{seperator}TestResults" +
-                //    $"{seperator}{currentDateDirectory}{seperator}{testContext.TestName}" +
-                  //  DateTime.Now.ToString("_HHmmss") + ".png";
+            
                  var driver = (IWebDriver)scenarioCommon.Browser.Native;
                 var scmkr = new ScreenshotMaker();
                 scmkr.RemoveScrollBarsWhileShooting();
                 var bytesArr = driver.TakeScreenshot(new VerticalCombineDecorator(scmkr));
                 File.WriteAllBytes(
                     path, bytesArr);
-       //     scenarioCommon.Browser.MaximiseWindow();                
-         //   scenarioCommon.Browser.SaveScreenshot(path);
+      
             testContext.AddResultFile(path);
             ReportStatus("False");         
         }      
