@@ -2,6 +2,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UiTest.Lib;
 using System;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium;
+using WDSE.ScreenshotMaker;
+using OpenQA.Selenium.Support.Extensions;
+using WDSE.Decorators;
+using System.IO;
+using WDSE;
 
 namespace Hooks
 {
@@ -33,9 +39,21 @@ namespace Hooks
         if (scenarioCommon.HasBrowser != null)
         {              
             var seperator = GetInformation.separator;
-            var path = $"{GetInformation.projectDirectory}{seperator}TestResults{seperator}{testContext.TestName}." + DateTime.Now.ToString("_MMddyyyy_HHmmss") + ".png";
-            scenarioCommon.Browser.MaximiseWindow();                
-            scenarioCommon.Browser.SaveScreenshot(path);
+                  var currentDateDirectory = Directory.CreateDirectory(GetInformation.projectDirectory+seperator + "TestResults"
+                      + seperator + DateTime.Now.ToString("MMddyyyy"));
+                 var path = $"{currentDateDirectory}{seperator}{testContext.TestName}" + 
+                    DateTime.Now.ToString("_HHmmss") + ".png";
+              //  var path = $"{GetInformation.projectDirectory}{seperator}TestResults" +
+                //    $"{seperator}{currentDateDirectory}{seperator}{testContext.TestName}" +
+                  //  DateTime.Now.ToString("_HHmmss") + ".png";
+                 var driver = (IWebDriver)scenarioCommon.Browser.Native;
+                var scmkr = new ScreenshotMaker();
+                scmkr.RemoveScrollBarsWhileShooting();
+                var bytesArr = driver.TakeScreenshot(new VerticalCombineDecorator(scmkr));
+                File.WriteAllBytes(
+                    path, bytesArr);
+       //     scenarioCommon.Browser.MaximiseWindow();                
+         //   scenarioCommon.Browser.SaveScreenshot(path);
             testContext.AddResultFile(path);
             ReportStatus("False");         
         }      
