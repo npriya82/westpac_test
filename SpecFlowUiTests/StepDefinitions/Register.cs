@@ -18,7 +18,7 @@ namespace SpecFlowUiTests.StepDefinitions
         private String RandomValue;
 
         public String getRandomNumber()
-        {            
+        {
             Random generator = new Random();
             var r = generator.Next(100000, 1000000);
             RandomValue = "Test" + r.ToString();
@@ -45,9 +45,9 @@ namespace SpecFlowUiTests.StepDefinitions
             Thread.Sleep(1000);
             var regPage = new RegistrationPage(scenarioCommon);
             regPage.RegistrationPageHeading.Should().Equals("Register with Buggy Cars Rating");
-            
+
             if (String.IsNullOrEmpty(RandomValue))
-            {                
+            {
                 RandomValue = getRandomNumber();
             }
             regPage.EnterLogin(RandomValue);
@@ -60,8 +60,8 @@ namespace SpecFlowUiTests.StepDefinitions
 
             regPage.EnterConfirmPassword("Pass123456!");
 
-            regPage.ClickRegister();                
-           
+            regPage.ClickRegister();
+
         }
 
         [Then(@"I am able to vote for the popular model car with comments")]
@@ -71,13 +71,11 @@ namespace SpecFlowUiTests.StepDefinitions
             new HomePage(scenarioCommon).Visit();
             new HomePage(scenarioCommon).ReEnterLogin(RandomValue);
             new HomePage(scenarioCommon).ReEnterPassword("Pass123456!");
-            new HomePage(scenarioCommon).ClickLogin();
-            // click on popular model car (middle button)
-            Thread.Sleep(1000);
-            new PopularModelPage(scenarioCommon).Visit();
-            new PopularModelPage(scenarioCommon).EnterComment();
-            // click vote as logged in user 
-            new PopularModelPage(scenarioCommon).ClickVote();            
+            new HomePage(scenarioCommon).ClickLogin();           
+            Thread.Sleep(2000);
+            new BugattiChironPage(scenarioCommon).Visit();
+            new BugattiChironPage(scenarioCommon).EnterComment();
+            new BugattiChironPage(scenarioCommon).ClickVote();
         }
     }
 }

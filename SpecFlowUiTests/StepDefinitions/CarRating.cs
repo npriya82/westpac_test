@@ -1,5 +1,4 @@
-﻿
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using UiTest.Lib;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,10 +8,10 @@ namespace SpecFlowUiTests.StepDefinitions
 {
     [Binding]
     public class CarRating : ParallelSteps
-    {        
+    {
         public CarRating(ScenarioContext scenarioContext, ScenarioCommon scenarioCommon, TestContext testContext) : base(scenarioContext, scenarioCommon, testContext)
         {
-            
+
         }
 
         [When(@"I click on the popular make")]
@@ -28,7 +27,6 @@ namespace SpecFlowUiTests.StepDefinitions
             new PopularMakePage(scenarioCommon).PageHeading.Should().NotBeNull();
             // Check for table exists 
             new PopularMakePage(scenarioCommon).CarsTable.Should().NotBeNull();
-            
         }
 
         [When(@"I click on the popular model")]
@@ -43,7 +41,6 @@ namespace SpecFlowUiTests.StepDefinitions
             new PopularModelPage(scenarioCommon).SpecificationHeading.Should().NotBeNull();
             new PopularModelPage(scenarioCommon).VotesHeading.Should().NotBeNull();
             new PopularModelPage(scenarioCommon).TableHeading.Should().NotBeNull();
-
         }
 
         [When(@"I click on the overall rating")]
@@ -57,9 +54,5 @@ namespace SpecFlowUiTests.StepDefinitions
         {
             new OverallRatingPage(scenarioCommon).TableHeading.Should().NotBeNull();
         }
-
-
-
-
     }
 }

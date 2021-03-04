@@ -3,20 +3,15 @@ using UiTest.Lib;
 
 namespace SpecFlowUiTests.Lib.PageObjects
 {
-  public abstract class BasePage
-  {
-        /// <summary>
-        /// Url of page
-        /// </summary>
+    public abstract class BasePage
+    {
         public abstract string Url { get; }
-
-        public BrowserSession Browser; 
-
+        public BrowserSession Browser;
         public ScenarioCommon scenarioCommon;
 
         public void Visit()
-        {         
-          scenarioCommon.Browser.Visit(Url);
+        {
+            scenarioCommon.Browser.Visit(Url);
         }
 
         /// <summary>
@@ -26,7 +21,7 @@ namespace SpecFlowUiTests.Lib.PageObjects
         /// <returns></returns>
         protected ElementScope FindId(string id)
         {
-          return Browser.FindId(id);
+            return Browser.FindId(id);
         }
 
         /// <summary>
@@ -36,7 +31,7 @@ namespace SpecFlowUiTests.Lib.PageObjects
         /// <returns></returns>
         protected ElementScope Field(string identifier)
         {
-          return Browser.FindField(identifier);
+            return Browser.FindField(identifier);
         }
-  }
+    }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj": {}
+    "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj": {
+    "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
         "projectName": "SpecFlowUiTests",
-        "projectPath": "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\obj\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

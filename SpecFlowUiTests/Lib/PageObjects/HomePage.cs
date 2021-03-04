@@ -1,21 +1,14 @@
-
 using Coypu;
 using UiTest.Lib;
 
 namespace SpecFlowUiTests.Lib.PageObjects
 {
-	public class HomePage : BasePage
-	{
-		//public override string Url => "https://fireandemergency.nz";
+    public class HomePage : BasePage
+    {
         public override string Url => "https://buggy.justtestit.org/";
 
-        /// <summary>
-        /// Error message on login page
-        /// </summary>
-        public ElementScope ErrorMessage => Browser.FindCss(".error-message");
-
         public HomePage(ScenarioCommon scenarioCommonInstance)
-        {            
+        {
             Browser = scenarioCommonInstance.Browser;
             this.scenarioCommon = scenarioCommonInstance;
         }
@@ -40,8 +33,6 @@ namespace SpecFlowUiTests.Lib.PageObjects
             Browser.FindXPath("//input[@name='password']").FillInWith("Test456456!");
         }
 
-
-
         public void ClickLogin()
         {
             Browser.FindXPath("//button[@class='btn btn-success']").Click();
@@ -51,7 +42,5 @@ namespace SpecFlowUiTests.Lib.PageObjects
         {
             return Browser.FindXPath("//a[@class='btn btn-success-outline']").Click();
         }
-
-
-	}
+    }
 }

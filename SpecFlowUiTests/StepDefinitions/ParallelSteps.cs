@@ -2,8 +2,9 @@ using TechTalk.SpecFlow;
 using UiTest.Lib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SpecFlowUiTests.StepDefinitions {
-	public class ParallelSteps
+namespace SpecFlowUiTests.StepDefinitions
+{
+    public class ParallelSteps
     {
         protected ScenarioContext scenarioContext;
 

@@ -1,16 +1,15 @@
-
 using Coypu;
 using System.Threading;
 using UiTest.Lib;
 
 namespace SpecFlowUiTests.Lib.PageObjects
 {
-	public class PopularModelPage : BasePage
-	{
-		public override string Url => "https://buggy.justtestit.org/model/c0bm09bgagshpkqbsuag%7Cc0bm09bgagshpkqbsuh0";
+    public class PopularModelPage : BasePage
+    {
+        public override string Url => "https://buggy.justtestit.org/model/c0bm09bgagshpkqbsuag%7Cc0bm09bgagshpkqbsuh0";
 
         public PopularModelPage(ScenarioCommon scenarioCommonInstance)
-        {            
+        {
             Browser = scenarioCommonInstance.Browser;
             this.scenarioCommon = scenarioCommonInstance;
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i9ew3ZwNM+X+PnyitzRpEnMkaUo0NJ6lhh1WDJ5XHpdlv34mltAq/zOgPz14vbSCEIkFiEvBrf7LlGgT8qubkw==",
+  "dgSpecHash": "j7UiYT2nBob8MihIt0Na3cG1nmTvSiERFrUrtuyHcWJRDyZk85qR9mwzVDME/jcYSlrTw7Mp71XiF1DO3n08Dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\westpac_test\\SpecFlowUiTests\\SpecFlowUiTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\coypu\\3.1.1\\coypu.3.1.1.nupkg.sha512",

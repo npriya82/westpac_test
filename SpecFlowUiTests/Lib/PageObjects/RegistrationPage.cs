@@ -1,4 +1,3 @@
-
 using Coypu;
 using System;
 using System.Threading;
@@ -6,9 +5,9 @@ using UiTest.Lib;
 
 namespace SpecFlowUiTests.Lib.PageObjects
 {
-	public class RegistrationPage : BasePage
-	{
-		public override string Url => "https://buggy.justtestit.org/register";
+    public class RegistrationPage : BasePage
+    {
+        public override string Url => "https://buggy.justtestit.org/register";
 
         /// <summary>
         /// Error message on login page
@@ -17,18 +16,16 @@ namespace SpecFlowUiTests.Lib.PageObjects
 
         public ElementScope RegistrationPageHeading => Browser.FindXPath("//h2/text()");
 
-        
-        public RegistrationPage(ScenarioCommon scenarioCommonInstance)
-        {            
-            Browser = scenarioCommonInstance.Browser;
-            this.scenarioCommon = scenarioCommonInstance;        }
 
-        
+        public RegistrationPage(ScenarioCommon scenarioCommonInstance)
+        {
+            Browser = scenarioCommonInstance.Browser;
+            this.scenarioCommon = scenarioCommonInstance;
+        }
 
         public void EnterLogin(string inputValue)
         {
             Browser.FindXPath("//input[@id='username']").FillInWith(inputValue);
-            Console.WriteLine("Login page" + inputValue);
         }
         public void EnterFirstName(string inputValue)
         {
@@ -43,7 +40,6 @@ namespace SpecFlowUiTests.Lib.PageObjects
         public void EnterPassword(string password)
         {
             Browser.FindXPath("//input[@id='password']").FillInWith(password);
-            Console.WriteLine("Password is " + password);
         }
 
         public void EnterConfirmPassword(string password)
